@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/note_edit_save"
+        android:icon="@drawable/save"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/save"/>
+    <item
+        android:id="@+id/note_edit_share"
+        android:icon="@drawable/share"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/share"/>
+     <item
+        android:id="@+id/note_edit_setreminder"
+        android:icon="@drawable/clock" 
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/set_reminder"/>
+
+</menu>

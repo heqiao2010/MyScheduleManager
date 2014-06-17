@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/reminder_title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/week_top" >
+
+        <Button
+            android:id="@+id/delete_reminder_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dip"
+            android:background="@drawable/list_uncheck" />
+
+        <Button
+            android:id="@+id/refresh_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dip"
+            android:background="@drawable/refresh_btn_bg" />
+
+        <TextView
+            android:id="@+id/date_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/upcoming_reminder"
+            android:textColor="@android:color/black" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/reminder_delete_choose_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:visibility="gone"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/bt_selectall"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="@string/choose_all"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/bt_deselectall"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/bt_selectall"
+            android:text="@string/choose_revert"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/bt_cancelselectall"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/bt_deselectall"
+            android:text="@string/choose_none"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/bt_confirmdelete"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/bt_cancelselectall"
+            android:text="@string/delete"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/show_delete_count_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bt_selectall"
+            android:text="@string/app_name" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/reminder_list_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <ListView
+            android:id="@+id/reminder_listview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:cacheColorHint="#00000000"
+            android:paddingLeft="30dip"
+            android:scrollbars="none" />
+
+        <com.hq.schedule.activitys.MyLetterListView
+            android:id="@+id/letterListView"
+            android:layout_width="30dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:background="#40000000" />
+    </RelativeLayout>
+
+</LinearLayout>

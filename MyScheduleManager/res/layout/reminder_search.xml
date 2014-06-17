@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/reminder_search_delete_choose_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:visibility="gone"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/reminder_search_bt_selectall"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:text="@string/choose_all"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/reminder_search_bt_deselectall"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/reminder_search_bt_selectall"
+            android:text="@string/choose_revert"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/reminder_search_bt_cancelselectall"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/reminder_search_bt_deselectall"
+            android:text="@string/choose_none"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/reminder_search_bt_confirmdelete"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/reminder_search_bt_cancelselectall"
+            android:text="@string/delete"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/reminder_search_show_delete_count_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/reminder_search_bt_confirmdelete"
+            android:text="delete 3" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/reminder_search_edit_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/reminder_search_edtx"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textAutoComplete"
+            android:singleLine="true" />
+
+        <ImageView
+            android:id="@+id/text_deleter"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignRight="@id/reminder_search_edtx"
+            android:background="@drawable/delete_tag"
+            android:contentDescription="@string/app_name" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/show_custimize_searcher_iv"
+        android:layout_width="fill_parent"
+        android:layout_height="20dp"
+        android:background="@drawable/downward" 
+        android:contentDescription="@string/app_name"/>
+ 
+    <RelativeLayout
+        android:id="@+id/customize_search_chooser_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/begin_time_chooser"
+            android:layout_width="155dp"
+            android:layout_height="40dp"
+            android:drawableLeft="@drawable/clock"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:text="2014-4-8" />
+
+        <TextView
+            android:id="@+id/end_time_chooser"
+            android:layout_width="155dp"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@id/begin_time_chooser"
+            android:drawableLeft="@drawable/clock"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:text="2014-4-8" />
+
+        <TextView
+            android:id="@+id/reminder_search_category_hint"
+            android:layout_width="145dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/begin_time_chooser"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:text="日程分类:" />
+
+        <Spinner
+            android:id="@+id/category_spinner"
+            android:layout_width="155dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/begin_time_chooser"
+            android:layout_toRightOf="@id/reminder_search_category_hint"
+            android:prompt="@string/app_name" />
+
+        <TextView
+            android:id="@+id/reminder_search_enable_hint"
+            android:layout_width="155dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/reminder_search_category_hint"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:text="日程是否启用" />
+
+        <CheckBox
+            android:id="@+id/reminder_enabled_checkbox"
+            android:layout_width="155dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/reminder_search_category_hint"
+            android:layout_toRightOf="@id/reminder_search_enable_hint"
+            android:prompt="@string/app_name" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/search_result_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="#00000000" />
+
+</LinearLayout>

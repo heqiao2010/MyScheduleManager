@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <ImageView 
+        android:id="@+id/nb_item_tag"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_margin="9dp"
+        android:background="@drawable/note"
+        android:contentDescription="@string/app_name"/>
+    
+    <TextView
+        android:id="@+id/nb_item_note_time"
+        android:layout_width="fill_parent"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center_vertical"
+        android:layout_toRightOf="@id/nb_item_tag"
+        android:text="@string/app_name"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/nb_item_text"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:singleLine="true"
+        android:maxEms="15"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/nb_item_note_time"
+        android:layout_gravity="center_vertical"
+        android:layout_toRightOf="@id/nb_item_tag"
+        android:text="@string/app_name"
+        android:textSize="20sp"/>
+
+</RelativeLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:id="@+id/server_info_setting">
+
+    <EditText
+        android:id="@+id/server_info_setting_ip_ed"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/server_ip"
+        android:inputType="numberDecimal"
+        android:singleLine="true" />
+
+    <EditText
+        android:id="@+id/server_info_setting_port_ed"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/server_port"
+        android:inputType="numberDecimal"
+        android:singleLine="true" />
+
+</LinearLayout>

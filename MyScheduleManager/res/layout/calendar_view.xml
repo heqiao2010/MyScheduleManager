@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/calendar_view"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/calendar_view_title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/week_top" >
+
+        <Button
+            android:id="@+id/show_list_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dip"
+            android:background="@drawable/list_btn_bg" />
+
+        <Button
+            android:id="@+id/show_setting_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dip"
+            android:background="@drawable/setting_btn_bg" />
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/title_bg"
+            android:text="@string/app_name"
+            android:textColor="@android:color/black" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/calendar_view_main_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/pointer_btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/pin_down"
+            android:contentDescription="@string/app_name" />
+
+        <!-- 隐藏的控件 -->
+
+        <LinearLayout
+            android:id="@+id/floating_widget"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/pointer_bg"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/pin_up" />
+
+            <TextView
+                android:id="@+id/pointer_info"
+                android:layout_width="120dp"
+                android:layout_height="75dp"
+                android:layout_gravity="center_vertical"
+                android:singleLine="true"
+                android:maxEms="4"
+                android:background="@drawable/dialog"
+                android:textSize="25sp"
+                android:textColor="@android:color/white"
+                android:gravity="center_vertical" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/event_edit"
+            android:layout_width="120dp"
+            android:layout_height="65dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/pointer_btn"
+            android:hint="@string/reimder_title_hint"
+            android:inputType="textMultiLine"
+            android:maxLines="2" />
+
+        <com.hq.schedule.views.TimePicker
+            android:id="@+id/time_picker"
+            android:layout_width="120dp"
+            android:layout_height="85dp"
+            android:layout_gravity="right"
+            android:layout_toRightOf="@id/event_edit"
+            android:focusable="true" />
+
+        <LinearLayout
+            android:id="@+id/week_line"
+            android:layout_width="fill_parent"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/event_edit"
+            android:orientation="horizontal" >
+
+            <com.hq.schedule.views.BorderText
+                android:id="@+id/sun"
+                android:layout_width="46dp"
+                android:layout_height="fill_parent"
+                android:background="@drawable/week_top"
+                android:gravity="center"
+                android:text="@string/sun" />
+
+            <com.hq.schedule.views.BorderText
+                android:id="@+id/mon"
+                android:layout_width="46dp"
+                android:layout_height="fill_parent"
+                android:background="@drawable/week_top"
+                android:gravity="center"
+                android:text="@string/mon" />
+
+            <com.hq.schedule.views.BorderText
+                android:id="@+id/tue"
+                android:layout_width="46dp"
+                android:layout_height="fill_parent"
+                android:background="@drawable/week_top"
+                android:gravity="center"
+                android:text="@string/tue" />
+
+            <com.hq.schedule.views.BorderText
+                android:id="@+id/wed"
+                android:layout_width="46dp"
+                android:layout_height="fill_parent"
+                android:background="@drawable/week_top"
+                android:gravity="center"
+                android:text="@string/wed" />
+
+            <com.hq.schedule.views.BorderText
+                android:id="@+id/thu"
+                android:layout_width="46dp"
+                android:layout_height="fill_parent"
+                android:background="@drawable/week_top"
+                android:gravity="center"
+                android:text="@string/thu" />
+
+            <com.hq.schedule.views.BorderText
+                android:id="@+id/fri"
+                android:layout_width="46dp"
+                android:layout_height="fill_parent"
+                android:background="@drawable/week_top"
+                android:gravity="center"
+                android:text="@string/fri" />
+
+            <com.hq.schedule.views.BorderText
+                android:id="@+id/sat"
+                android:layout_width="46dp"
+                android:layout_height="fill_parent"
+                android:background="@drawable/week_top"
+                android:gravity="center"
+                android:text="@string/sat" />
+        </LinearLayout>
+
+        <ViewFlipper
+            android:id="@+id/viewFlipper"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/week_line" />
+    </RelativeLayout>
+
+</LinearLayout>

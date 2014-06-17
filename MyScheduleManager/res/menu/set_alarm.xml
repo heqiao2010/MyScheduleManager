@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/set_alarm_save"
+        android:icon="@drawable/save"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/save"/>
+    <item
+        android:id="@+id/set_alarm_revert"
+        android:icon="@drawable/revert"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/revert"/>
+    <item
+        android:id="@+id/set_alarm_delete"
+        android:icon="@drawable/delete"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/delete"/>
+    <item
+        android:id="@+id/set_alarm_share"
+        android:icon="@drawable/share"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/share"/>
+
+</menu>
