@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+<title>注册页面</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>欢迎使用日程管理系统!</h1>
+	<form method="POST">
+		<table border="0">
+			<tr>
+				<th><label>用户名:</label></th>
+				<th><input name="username" type="text" /></th>
+			</tr>
+			<tr>
+				<th><label>姓名:&nbsp;</label></th>
+				<th><input name="name" type="text" /></th>
+			</tr>
+			<tr>
+				<th><label>性别:&nbsp;</label></th>
+				<th><input name="gender" type="text" /></th>
+			</tr>
+			<tr>
+				<th><label>年龄:&nbsp;</label></th>
+				<th><input name="age" type="text" /></th>
+			</tr>
+			<tr>
+				<th><label>密码:&nbsp;</label></th>
+				<th><input name="password" type="password" /></th>
+			</tr>
+			<tr>
+				<th><label>重复密码:</label></th>
+				<th><input name="re_password" type="password" /></th>
+			</tr>
+			<tr>
+				<th><label>邮箱:&nbsp;</label></th>
+				<th><input name="email" type="text" /></th>
+			</tr>
+			<tr>
+				<th colspan="2"><input type="submit" value="注册" /> <input
+					type="button" value="返回"
+					onclick="javascript:window.location.href='http://localhost:8000/'" />
+				</th>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

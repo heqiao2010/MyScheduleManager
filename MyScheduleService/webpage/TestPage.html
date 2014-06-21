@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+<title>测试页面</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>欢迎使用日程管理系统!</h1>
+	<li>注册</li>
+	<form method="POST">
+		<table border="1">
+			<tr>
+				<th><label>操作:</label></th>
+				<th><input name="operator" type="text" value="register" /></th>
+			</tr>
+			<tr>
+				<th><label>用户名:</label></th>
+				<th><input name="username" type="text" /></th>
+			</tr>
+			<tr>
+				<th><label>姓名:&nbsp;</label></th>
+				<th><input name="name" type="text" /></th>
+			</tr>
+			<tr>
+				<th><label>性别:&nbsp;</label></th>
+				<th><input name="gender" type="text" /></th>
+			</tr>
+			<tr>
+				<th><label>年龄:&nbsp;</label></th>
+				<th><input name="age" type="text" /></th>
+			</tr>
+			<tr>
+				<th><label>密码:&nbsp;</label></th>
+				<th><input name="password" type="password" /></th>
+			</tr>
+			<tr>
+				<th><label>邮箱:&nbsp;</label></th>
+				<th><input name="email" type="text" /></th>
+			</tr>
+			<tr>
+				<th colspan="2"><input type="submit" value="注册" /></th>
+			</tr>
+		</table>
+	</form>
+	<br>
+	<li>获取备份列表</li>
+	<form method="POST">
+		<table border="1">
+			<tr>
+				<th><label>操作:</label></th>
+				<th><input name="operator" type="text" value="get_backup_list" /></th>
+			</tr>
+			<tr>
+				<th><label>用户名:</label></th>
+				<th><input name="username" type="text" /></th>
+			</tr>
+			<tr>
+				<th><label>密码:&nbsp;</label></th>
+				<th><input name="password" type="password" /></th>
+			</tr>
+			<tr>
+				<th colspan="2"><input type="submit" value="获取备份列表" /></th>
+			</tr>
+		</table>
+	</form>
+	<br>
+	<li>获取备份信息</li>
+	<form method="POST">
+		<table border="1">
+			<tr>
+				<th><label>操作:</label></th>
+				<th><input name="operator" type="text" value="get_backup_info" /></th>
+			</tr>
+			<tr>
+				<th><label>用户名:</label></th>
+				<th><input name="username" type="text" /></th>
+			</tr>
+			<tr>
+				<th><label>密码:&nbsp;</label></th>
+				<th><input name="password" type="password" /></th>
+			</tr>
+			<tr>
+				<th><label>备份时间:</label></th>
+				<th><input name="backup_time" type="text" /></th>
+			</tr>
+			<tr>
+				<th colspan="2"><input type="submit" value="获取备信息" /></th>
+			</tr>
+		</table>
+	</form>
+	<br>
+	<li>备份信息</li>
+	<form method="POST">
+		<table border="1">
+			<tr>
+				<th><label>操作:</label></th>
+				<th><input name="operator" type="text" value="backup_info" /></th>
+			</tr>
+			<tr>
+				<th><label>用户名:</label></th>
+				<th><input name="username" type="text" /></th>
+			</tr>
+			<tr>
+				<th><label>密码:&nbsp;</label></th>
+				<th><input name="password" type="password" /></th>
+			</tr>
+			<tr>
+				<th><label>日程信息:</label></th>
+				<th><input name="schedule_list" type="text" /></th>
+			</tr>
+			<tr>
+				<th><label>笔记信息:</label></th>
+				<th><input name="note_list" type="text" /></th>
+			</tr>
+			<tr>
+				<th><label>日程分类信息:</label></th>
+				<th><input name="category_list" type="text" /></th>
+			</tr>
+			<tr>
+				<th><label>节日信息:</label></th>
+				<th><input name="festival_list" type="text" /></th>
+			</tr>
+			<tr>
+				<th colspan="2"><input type="submit" value="备份信息" /></th>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
