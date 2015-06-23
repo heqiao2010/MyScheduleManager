@@ -23,11 +23,10 @@ public class AccountManage extends Activity {
 	private Button account_manage_login = null;
 	private Button account_manage_register = null;
 	private Button account_manage_logout = null;
-	// private Button account_manage_delete_all_info = null;
 	private Button account_manage_return = null;
 	private EditText ip_edit = null;
 	private EditText port_edit = null;
-
+ 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -41,8 +40,6 @@ public class AccountManage extends Activity {
 		account_manage_login = (Button) findViewById(R.id.account_manage_login);
 		account_manage_register = (Button) findViewById(R.id.account_manage_register);
 		account_manage_logout = (Button) findViewById(R.id.account_manage_logout);
-		// account_manage_delete_all_info = (Button)
-		// findViewById(R.id.account_manage_delete_all_info);
 		account_manage_return = (Button) findViewById(R.id.account_manage_return);
 	}
 
